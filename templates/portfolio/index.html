@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	KAIROS
+{% endblock %}
+
+{% block content %}
+	<div class = "hero" >
+		<div class = "hero-content">
+			<div class = "left">
+				<h1>{{ data.titulo }}</h1>
+				<h1>{{ data.bienvenida }}</h1>
+				<p> {{ data.lorem }} </p>
+				<a href = "#contacto" class = "btn">Contáctanos</a>
+			</div>
+			<div class = "right">
+				<img class = "pic" src = "{{ url_for('static', filename = 'big-data.png') }}" />
+			</div>
+		</div>
+	</div>
+{% include 'portfolio/section-first.html' %}
+{% include 'portfolio/section-second.html' %}
+{% include 'portfolio/section-third.html' %}
+{% endblock %}
